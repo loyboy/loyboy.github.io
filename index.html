@@ -1,74 +1,518 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-   
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124038960-3"></script>       
-     
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124038960-3"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+ 
+       gtag('config', 'UA-124038960-3');
+     </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
 
-      gtag('config', 'UA-124038960-3');
+    <!-- Read and update content attributes accordingly  -->
+
+    <meta
+      name="description"
+      content="Welcome to my portfolio website. My name is Emmanuel Ephraim. I am a Software
+      Engineer and Devops engineer that has good understanding of software development design patterns, continous integration, cloud infrastructure deployment and maintainance. Tech stacks include Java, Python(A.I Inclined), Nodejs/Javascript/Typescript, PHP, AWS Web services, Azure, DigitalOcean"
+    />
+
+    <!-- Google / Search Engine Tags -->
+<meta itemprop="name" content="Emmanuel Ephraim's Portfolio">
+<meta itemprop="description" content="Welcome to my portfolio website. My name is Emmanuel Ephraim. I am a Software
+Engineer and Devops engineer that has good understanding of software development design patterns, continous integration, cloud infrastructure deployment and maintainance. Tech stacks include Java, Python(A.I Inclined), Nodejs/Javascript/Typescript, PHP, AWS Web services, Azure, DigitalOcean.">
+
+<!-- Reference screenshot of updated site's header in place of content -->
+<meta itemprop="image" content="assets/images/sharing-card.png">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://loyboy.github.io">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Emmanuel Ephraim's Portfolio">
+<meta property="og:description" content="Welcome to my portfolio website. My name is Emmanuel Ephraim. I am a Software
+Engineer and Devops engineer that has good understanding of software development design patterns, continous integration, cloud infrastructure deployment and maintainance. Tech stacks include Java, Python(A.I Inclined), Nodejs/Javascript/Typescript, PHP, AWS Web services, Azure, DigitalOcean.">
+
+<!-- Reference screenshot of updated site's header in content -->
+<meta property="og:image" content="assets/images/sharing-card.png">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Emmanuel Ephraim's Portfolio">
+<meta name="twitter:description" content="Welcome to my portfolio website. My name is Emmanuel Ephraim. I am a Software
+Engineer and Devops engineer that has good understanding of software development design patterns, continous integration, cloud infrastructure deployment and maintainance. Tech stacks include Java, Python(A.I Inclined), Nodejs/Javascript/Typescript, PHP, AWS Web services, Azure, DigitalOcean.">
+
+<!-- Reference screenshot of updated site's header in content -->
+<meta name="twitter:image" content="assets/images/sharing-card.png">
+
+
+<!-- Update favicon href attribute with image of yourself -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicons.png"
+      type="image/png"
+    />
+
+    <!-- Preloading fonts for better performance -->
+
+    <link
+      rel="preload"
+      href="assets/fonts/Mona-Sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+    <title>Emmanuel Ephraim's Portfolio</title>
+  </head>
+
+  <body>
+
+    <script>
+      const theme = localStorage.getItem("theme") || "dark";
+      document.body.classList.add(theme);
     </script>
 
-    <title>Emmanuel Etukudo - Full Stack Software Developer & Data Science Enthusiast from Nigeria</title>
-     
-      <link rel="shortcut icon" href="assets/img/icon.png">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta name="description" content="Loyboy ---> is a Nigeria Software
-     Engineer that has good understanding of software development patterns. Java, Nodejs, Golang, PHP are my favorite languages. I am based in Nigeria.">
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <header class="header">
 
-  </head>
-  <body style="background: #847c7ca3;">
-    <header id="body" class="mdl-layout__header mdl-layout__header--transparent">
-      <div id="header">
-        <img src="assets/img/avatar.png" alt="Emmanuel Etukudo - Full Stack Software Developer & Data Science Enthusiast from Nigeria : Java, Nodejs, Golang, PHP ">
-         
-        <h1> <b style="color: red; font-style: italic;">var</b> <b style="color: blue; "> myName</b> = '<span style="color: orange;">Emmanuel Etukudo</span>'; </h1>
-          <div id="bio">
-            <div>
-              <h2>Full Stack Web developer & Machine learning Enthusiast</h2>
-            </div>
+      <div class="menu-btn-container">
+        <div class="container">
+          <button type="button" class="menu-btn">Menu</button>
+        </div>
+      </div>
+
+      <nav class="nav hidden">
+        <ol class="nav-items">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#work">My Work</a></li>
+          <li class="nav-item"><a href="#upcomingwork">My Upcoming Ideas</a></li>
+          <li class="nav-item"><a href="#blog">See Blog</a></li>
+          <li class="nav-item"><a href="#skills">My Skills</a></li>
+          <li class="nav-item">
+            <a href="#contact" data-focused="last-focused">Contact</a>
+          </li>
+        </ol>
+      </nav>
+
+      <div class="container">
+        <div class="header-textbox">
+          <!-- Replace with your name and job title -->
+          <h1 class="h1">
+            Hi, I'm Emmanuel Ephraim<br />
+            Fullstack Developer and Cloud & DevOps Engineer
+          </h1>
+
+          <!-- Add a small introductory paragraph about yourself -->
+          <p class="header-text">
+            A software engineer with cloud infrastructure deployment and cloud security skills.
+          </p>
+
+          <div class="header-btns">
+            <a href="#contact" class="btn btn-cta">Hire me</a>
+            <a href="#work" class="btn btn-secondary">See all my work</a>
+            <a href="#upcomingwork" class="btn btn-secondary">See my upcoming work</a>
           </div>
-         <div class="cherrytree-widget" data-product-id="102"> </div>
-       <!--  <cherrytree-modal id="cherry"></cherrytree-modal>
-         <button class="buywithcherrytree" product="1020">hello</button> -->
-         
-        
-          <a href="about.html">About Me</a> <br>
-          <a href="https://medium.com/@loyhub1" target="_blank">Blog</a> <br>
-          <a href="mailto:loyboy606@gmail.com">Throw An Email</a>
+        </div>
       </div>
     </header>
 
-    <footer id="connect" class="mdl-mini-footer">
-      <ul id="footer-links" class="mdl-mini-footer__link-list">
-        <li>
-          <a href="https://github.com/loyboy">
-            <i class="fa fa-github fa-4x" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://linkedin.com/in/loysupremo/">
-            <i class="fa fa-linkedin fa-4x" aria-hidden="true"></i>
-          </a>
-        </li>
-       
-        <li>
-          <a href="https://twitter.com/loysupremo">
-            <i class="fa fa-twitter fa-4x" aria-hidden="true"></i>
-          </a>
-        </li>
+    <main>
 
-      </ul>
+      <section class="work">
+        <div class="container">
+          <h2 class="h2" id="work">Selected Work Done</h2>
+          <div class="work-boxes">
+
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Plenti Africa</h3>
+                <p class="work-text">
+                  A loyalty and rewards supermarket based in Lagos, Nigeria.
+                </p>
+               
+                <ol class="work-technologies">
+                  <li>Laravel 10</li>
+                  <li>Vuejs 3</li>
+                  <li>Vite</li>
+                  <li>SCSS</li>
+                  <li>Postgres</li>
+                  <li>DigitalOcean</li>                  
+                </ol>
+
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a href="https://staging.plenti.africa" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+                </div>
+              </div>
+
+         <!-- Update img src and alt attribute  -->
+
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/plenti-2.png"
+                  alt="plenti africa"
+                />
+              </picture>
+            </div>
+
+            <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">Standard based Improvement System for Schools (StandBasis)</h3>
+                <!-- Add small description of your project  -->
+
+                <p class="work-text">Edtech tech start-up for school governance, and compliance management across all metrics we monitor like curriculum delivery processes, teacher resources, academic performance and general school health.</p>
+                <ol class="work-technologies">
+                  <li>Spring Boot (Java)</li>
+                  <li>Vuejs 3</li>
+                  <li>Bootstrap Css</li>
+                  <li>Postgres</li>
+                  <li>DigitalOcean</li>
+                </ol>
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a href="https://standbasis.com" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+
+                  <a
+                    href="https://school-digital-transformation.com"
+                    target="_blank"
+                    rel="noopener"
+                    title="Standbasis Dashboard"
+                  >
+                    <img
+                      src="assets/images/social-links/hyperlink-external.png"
+                      alt="Standbasis"
+                      loading="lazy"
+                    />
+                  </a>
+
+                  <a
+                    href="https://github.com/loyboy/standbasis2022"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+
+                </div>
+              </div>
+         <!-- Update img src and alt attribute  -->
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/standbasis-3.png"
+                  alt="portfolio template"
+                />
+              </picture>
+            </div>
+
+            <div class="work-box">
+              <div class="work-textbox">
+                
+                <h3 class="h3">NersApp School Management System</h3>
+                <!-- Add small description of your project  -->
+                <p class="work-text">
+                  Edtech startup built as an Administrative School Management System.
+                </p>
+                <ol class="work-technologies">
+                  <li>Laravel 10 (PHP)</li>
+                  <li>Tailwind Css</li>
+                  <li>Emotion</li>
+                  <li>Maria DB</li>
+                  <li>VPS Linux Server</li>
+                </ol>
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a href="https://www.nersapp.com" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a>
+                </div>
+              </div>
+
+         <!-- Update img src and alt attribute  -->
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/nersapp-1.png"
+                  alt="contribute dev"
+                />
+              </picture>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!--upcoming work-->
+      <section class="work">
+        <div class="container">
+          <h2 class="h2" id="work">Upcoming Ideas Currently In The Pipeline</h2>
+          <div class="work-boxes">
+
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Bounty.</h3>
+                <p class="work-text">
+                  Cashless Giveaways made easy.
+                </p>
+               
+                <ol class="work-technologies">
+                  <li>Javascript</li>
+                  <li>React Native</li>
+                  <li>Nuxtjs 3</li>
+                  <li>Vite</li>
+                  <li>SCSS</li>    
+                  <li>Supabase</li>               
+                </ol>
+
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a href="#" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+                </div>
+              </div>      
+
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/bounty-1.PNG"
+                  alt="bounty africa"
+                />
+              </picture>
+            </div>
+
+            <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">Elmo Safe Spaces</h3>
+                <!-- Add small description of your project  -->
+
+                <p class="work-text">RAG A.I tech start-up for mental health health management and match making.</p>
+                <ol class="work-technologies">
+                  <li>Python</li>
+                  <li>LangChain</li>
+                  <li>Lang Graph</li>
+                  <li>LLM chat</li>
+                  <li>StreamLit</li>
+                  <li>Chroma</li>
+                  <li>AWS Bedrock</li>
+                </ol>
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a href="#" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+                </div>
+              </div>
+         
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/elmo.png"
+                  alt="elmo safe spacies"
+                />
+              </picture>
+
+            </div>
+
+          </div>
+          
+        </div>
+      </section>
+
+      <section class="article">
+        <div class="container">
+          <h2 class="h2" id="blog">My Articles</h2>
+          <div class="article-boxes">
+            <article class="article-box featured-article">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h3">
+                    Handling Distractions as a Software engineer
+                  </h3>
+                  <p class="article-text">
+                    Note: These are facts i had to bring up based on the increasing need for software engineers to practise managing their time.
+                  </p>
+                </div>
+                <div class="article-info">
+                  <a href="https://dev.to/emmasupremedev" class="link" target="_blank" rel="noopener"
+                    >Continue reading</a
+                  >
+                </div>
+              </div>
+              <picture class="article-illustration">
+                <img
+                  src="assets/images/featured-blog.webp"
+                  alt="MacBook Pro"
+                  loading="lazy"
+                />
+              </picture>
+            </article>
+           
+          </div>
+        </div>
+      </section>
+
+      <section class="skills">
+        <div class="container">
+          <h2 class="h2" id="skills">My Toolkit</h2>
+          <div class="skills-imgs">
+                <img src="assets/images/skills/react.webp" alt="React" class="skills-img" loading="lazy" title="React">
+                <img src="assets/images/skills/vue.webp" alt="Vue" class="skills-img" loading="lazy" title="Svelte">
+                 <img src="assets/images/skills/typescript.webp" alt="Typescript" class="skills-img" loading="lazy" title="Typescript">
+                 <img src="assets/images/skills/java.png" alt="Java" class="skills-img" loading="lazy" title="Java">
+                 <img src="assets/images/skills/spring.png" alt="Spring" class="skills-img" loading="lazy" title="Spring">
+                 <img src="assets/images/skills/php.png" alt="php" class="skills-img" loading="lazy" title="PHP">
+                 <img src="assets/images/skills/laravel.png" alt="Laravel" class="skills-img" loading="lazy" title="Laravel">
+                 <img src="assets/images/skills/next-js.webp" alt="NextJS" class="skills-img" loading="lazy" title="NextJS">
+                 <img src="assets/images/skills/nuxt-js.png" alt="NuxtJs" class="skills-img" loading="lazy" title="NuxtJS">
+                 <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" loading="lazy" title="Git">
+                 <img src="assets/images/skills/aws.png" alt="Aws" class="skills-img" loading="lazy" title="Aws">
+                 <img src="assets/images/skills/postgres.png" alt="Postgres" class="skills-img" loading="lazy" title="Postgres">
+                 <img src="assets/images/skills/docker.png" alt="Docker" class="skills-img" loading="lazy" title="Docker">
+                 <img src="assets/images/skills/kubernetes.png" alt="Kubernetes" class="skills-img" loading="lazy" title="Kubernetes">
+                 <img src="assets/images/skills/js.webp" alt="JavaScript" class="skills-img" loading="lazy" title="JavaScript">
+                 <img src="assets/images/skills/python.webp" alt="Python" class="skills-img" loading="lazy" title="Python">
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <h2 class="h2" id="contact">Send Message</h2>
+          <div class="contact-content">
+            <div class="contact-textbox">
+              <!-- Please comment this component if you're not available for hire -->
+              <strong href="#" class="hire-alert">
+                <span class="indicator"></span>
+                Available for hire
+              </strong>
+              <p class="contact-text">
+                As a software engineer and cloud architect and engineer, I construct web interfaces and design
+                systems with a special love for accessibility and the
+                high performance. I tend to code things from scratch and enjoy
+                bringing ideas to life.
+              </p>
+              <p class="contact-text">
+                I'm also an open-source developer, and in my spare time, I do
+                some fashion design sales funnel side hustles for other clients.
+              </p>
+              <img
+                src="assets/images/signature.png"
+                alt="Emmanuel Ephraim"
+                class="signatures"
+                loading="lazy"
+              />
+            </div>
+
+            <form action="#" id="email-form" class="contact-form">
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  inputmode="email"
+                />
+              </div>
+              <div class="form-field">
+                <label for="message">How can I help you?</label>
+                <textarea name="message" id="message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-cta">Send</button>
+            </form>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Update href and src attributes -->
+          <nav>
+            <ol class="footer-links">
+              <li class="footer-link">
+                <a title="GitHub" href="https://github.com/loyboy" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/github.svg"
+                    alt="GitHub"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Linkedin" href="https://www.linkedin.com/in/loysupremo" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/linkedin.svg"
+                    alt="Linkedin"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Whatsapp" href="wa.link/on3iim" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/whatsapp.svg"
+                    alt="Whatsapp"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Substack" href="substack.com/@emmasupremedev" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/substack.svg"
+                    alt="Substack"
+                /></a>
+              </li>
+            </ol>
+          </nav>
+          <p class="footer-text">
+            &copy; <span>2024</span> - Developed by <a target="_blank" rel="noopener" href="https://github.com/loyboy">Emmanuel Ephraim.</a>
+          </p>
+          <label class="theme-switch" for="theme-switch">
+            <span>Dark Theme</span>
+            <input type="checkbox" id="theme-switch" role="switch"/>
+          </label>
+        </div>
+      </div>
     </footer>
+
+    <script>
+      const form = document.getElementById('email-form');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const mailto = `mailto:findme@standbasis.com from ${name}&body=${message}`;
+        window.location.href = mailto;
+      });
+    </script>
 
   </body>
 </html>
-
